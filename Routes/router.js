@@ -18,5 +18,13 @@ router.delete('/wishlist/removeItem/:id', jwtMiddleWare, productController.delet
 router.post('/add-cart',jwtMiddleWare, cartController.addTocartControllerApi)
 router.get('/allCartitems',jwtMiddleWare,cartController.gettAllCartItemsControllerApi)
 
+router.get('/cart/increment/:id',jwtMiddleWare,cartController.incrementItem)
+
+router.get('/cart/decrement/:id',jwtMiddleWare, cartController.decrementitem)
+
+router.delete('/empty-cart', jwtMiddleWare, cartController.emptycart)
+
+router.delete('/cart/deleteone/:id',jwtMiddleWare, cartController.removeItem)
+
 module.exports = router;
 
